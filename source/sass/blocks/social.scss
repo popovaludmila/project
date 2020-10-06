@@ -1,0 +1,27 @@
+.social {
+    padding-top: 20px;
+
+    &__list {
+        @include list();
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        margin-right: 28px;
+        margin-bottom: 5px;
+        cursor: pointer;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__icon {
+        fill: $add-color;
+        pointer-events: none;
+      }
+}

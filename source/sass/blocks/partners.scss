@@ -1,0 +1,16 @@
+.partners {
+
+    &__list {
+        @include list();
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 105px;
+    }
+
+    &__img {
+        background-color: $light-color;
+        cursor: pointer;
+    }
+}

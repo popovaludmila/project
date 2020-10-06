@@ -1,0 +1,61 @@
+.footer {
+    position: relative;
+
+    &__inner {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding-top: 80px;
+        padding-bottom: 95px;
+    }
+
+    &__group {
+        display: flex;
+        flex-wrap: wrap;
+
+        &--one {
+            width: 295px;
+            padding-right: 70px;
+        }
+    }
+
+    &__logo-name {
+        position: relative;
+        padding-right: 48px;
+        @include text();
+        font-size: 27px;
+        line-height: 34px;
+
+        &::before,
+        &::after {
+            position: absolute;
+            display: block;
+            z-index: 1;
+        }
+
+        &::before {
+            content: "Ex";
+            font-size: 27px;
+            line-height: 34px;
+            color: $light-color;
+            top: 0;
+            right: 12px;
+            z-index: 2;
+        }
+
+        &::after {
+            content: url("../img/logo-triangle.svg");
+            width: 42px;
+            height: 47px;
+            top: -5px;
+            right: 0;
+        }
+    }
+
+    &__address {
+        padding-top: 20px;
+        @include text();
+        font-size: 14px;
+    }
+}

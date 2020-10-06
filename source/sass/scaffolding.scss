@@ -1,0 +1,54 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    position: relative;
+    min-width: 320px;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: "Exo", "Arial", sans-serif;
+    color: $base-color;
+    background-color: $light-color;
+}
+
+a {
+    text-decoration: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.container {
+   @include mobile-wrapper();
+  }
+  
+  @media (min-width: $tablet-width) {
+    .container {
+      @include tablet-wrapper();
+    }
+  }
+  
+  @media (min-width: $desktop-width) {
+    .container {
+      @include desktop-wrapper();
+    }
+  }

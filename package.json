@@ -1,0 +1,73 @@
+{
+  "name": "project",
+  "version": "17.0.0",
+  "private": true,
+  "description": "Проект",
+  "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "1.x",
+    "autoprefixer": "9.5.x",
+    "browser-sync": "2.26.x",
+    "gulp": "^4.0.2",
+    "gulp-csso": "^4.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-posthtml": "^3.0.4",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "2.6.x",
+    "gulp-svgstore": "^7.0.1",
+    "gulp-webp": "^4.0.1",
+    "pixel-glass": "^1.0.13",
+    "posthtml-include": "^1.4.3",
+    "stylelint": "^13.4.0",
+    "stylelint-config-htmlacademy": "0.1.x"
+  },
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
+    "test": "npm run editorconfig && npm run stylelint",
+    "build": "gulp build",
+    "start": "gulp start"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "source/*.html",
+    "source/js/**/*.js",
+    "source/img/**/*.svg",
+    "source/less/**/*.less"
+  ],
+  "engines": {
+    "node": "8.16"
+  },
+  "dependencies": {
+    "cli": "^1.0.1",
+    "del": "^5.1.0",
+    "gulp-htmlmin": "^5.0.1",
+    "imagemin": "^7.0.1",
+    "imagemin-webp": "^5.1.0",
+    "modernizr": "^3.11.2",
+    "normalize": "^0.3.1",
+    "normalize.css": "^8.0.1",
+    "picturefill": "^3.0.3",
+    "svg4everybody": "^2.1.9"
+  },
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/popovaludmila/project.git"
+  },
+  "author": "Ludmila Popova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/popovaludmila/project/issues"
+  },
+  "homepage": "https://github.com/popovaludmila/project#readme"
+}

@@ -1,0 +1,29 @@
+.navigation {
+    flex-direction: row;
+
+    &__group {
+        padding-right: 85px;
+
+        &--one{
+            padding-right: 100px;
+        }
+    }
+
+    &__title {
+        @include title();
+        padding-top: 2px;
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    &__list {
+        @include list();
+        padding-top: 23px;
+    }
+
+    &__link {
+        @include text();
+        font-size: 14px;
+        line-height: 30px;
+    }
+}

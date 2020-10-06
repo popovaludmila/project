@@ -1,0 +1,79 @@
+.form {
+    &__wrapper {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 25px;
+
+        &:first-child {
+            padding-left: 0;
+        }
+    }
+
+    &__input {
+        width: 263px;
+        padding: 16px 19px;
+        background-color: $add-color;
+        text-transform: uppercase;
+        border: 1px solid $light-color;
+        border-radius: 3px;
+        color: $light-color;
+        outline: none;
+        transition: ease-in-out;
+
+        &::placeholder {
+            color: $light-color;
+        }  
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $add-color-hover;
+        }
+    }
+
+    &__button {
+        position: relative;
+        @include button();
+        width: 256px;
+        margin-left: 19px;
+        margin-bottom: 25px;
+        background-color: $pink-color;
+        border-radius: 3px;
+        box-shadow: 0px 3px 3px 0px rgba(14, 15, 15, 0.25);
+        color: $light-color;
+        text-transform: uppercase;
+        transition: ease-in-out;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $pink-color-hover;
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            display: block;
+            z-index: 1;
+        }
+
+        &::before {
+            left: 0;
+            top: -55px;
+            content: url("../img/arrow.png");
+            width: 15px;
+            height: 41px;
+        }
+
+        &::after {
+            content: "30 days free trial for all.";
+            color: $light-color;
+            text-transform: lowercase;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -55px;
+            width: 100%;
+        }
+    }
+}
+   

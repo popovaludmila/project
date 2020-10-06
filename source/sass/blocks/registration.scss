@@ -1,0 +1,40 @@
+.registration {
+    background-color: $blue-background-color;
+
+    &__inner {
+        display: flex;
+        flex-direction: column; 
+        text-align: center;
+        padding-top: 90px;
+        padding-bottom: 80px;
+    }
+
+    &__suptitle {
+        @include suptitle();
+        color: $pink-color;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        @include title();
+        color: $light-color;
+        padding-bottom: 95px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    &__agreement {
+        @include text();
+        color: $light-color;
+        padding-top: 25px;
+    }
+
+    &__link {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}

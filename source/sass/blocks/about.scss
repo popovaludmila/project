@@ -1,0 +1,56 @@
+.about {
+    position: relative;
+    background-color: $light-color;
+
+    &::before,
+    &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        top: 0;
+
+    }
+
+    &::before {
+        width: 40%;
+        height: 100%;
+        right: 0;
+        z-index: 1;
+        background-color: $grey-background-color;
+    }
+
+    &::after {
+        width: 100%;
+        height: 100%;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        background-image: url("../img/bg-triangle-right.svg");
+        background-repeat: no-repeat;
+        background-position: 100% 0;
+        background-size: auto;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        width: 570px;
+        padding-top: 185px;
+        padding-bottom: 165px;
+    }
+
+    &__suptitle {
+        @include suptitle();
+        color: $pink-color;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        @include title();
+    }
+
+    &__text {
+        margin: 0;
+        padding-top: 40px;
+    }
+}

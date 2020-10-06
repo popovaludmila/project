@@ -1,0 +1,40 @@
+.author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     padding-left: 25px;
+    padding-right: 25px;
+   
+    color: $light-color;
+    text-align: center;
+
+    &:first-child,
+    &:nth-child(3n+1) {
+        padding-left: 0;
+    }
+
+    &:nth-child(3n) {
+        padding-right: 0;
+    }
+
+    &__img {
+        width: 75px;
+        height: 75px;
+    }
+
+    &__name {
+        @include title();
+        padding-top: 20px;
+        font-size: 22px;
+    }
+
+    &__prof {
+        @include text();
+        color: $pink-color;
+    }
+
+    &__quote {
+        @include text();
+        color: $light-color;
+    }
+}

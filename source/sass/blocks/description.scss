@@ -1,0 +1,56 @@
+.description {
+    position: relative;
+    background-color: $light-color;
+    background-image: url("../img/bg-triangle-left.svg");
+    background-repeat: no-repeat;
+    background-position: -30px -400px;
+    background-size: cover;
+
+
+    &__inner {
+        position: relative;
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+
+
+        &::before {
+            position: absolute;
+            content: "";
+            left: -80px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 650px;
+            height: 100%;
+            background-image: url("../img/macbook.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: transparent;
+            background-size: contain;
+        }
+       
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+        padding-top: 185px;
+        padding-bottom: 165px;
+    }
+
+    &__suptitle {
+        @include suptitle();
+        color: $pink-color;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        @include title();
+    }
+
+    &__text {
+        margin: 0;
+        padding-top: 40px;
+    }
+}
